@@ -114,7 +114,7 @@ const table =(()=>{
         end=false
         numberplayed = []
         btns = []
-        let botones = document.querySelectorAll('button')
+        let botones = document.querySelectorAll('.scuare')
         botones.forEach((x)=>{
             x.innerHTML = ''
         })
