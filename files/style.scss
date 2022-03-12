@@ -1,0 +1,225 @@
+$cub: 25vw;
+$c50: #f8fafc;
+$c100: #f1f5f9;
+$c200: #e2e8f0;
+$c300: #cbd5e1;
+$c400: #94a3b8;
+$c500: #64748b;
+$c600: #475569;
+$c700: #334155;
+$c800: #1e293b;
+$c900: #0f172a;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&display=swap');
+*{
+    font-family: 'Fredoka', sans-serif;
+}
+::selection{
+    color: white;
+    background-color: #64748b;
+}
+body {
+    background-color: $c100;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    header {
+        background-color: $c400;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        font-weight: bold;
+        font-size: 2.8rem;
+        color: $c100;
+    }
+    .content{
+        height: 80vw;
+        max-height: 650px;
+        width: 85vw;
+        display: flex;
+        justify-content: space-between;
+        .player1 ,.player2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            div{
+                font-size: 4.3rem;
+                margin-top: 15px;
+                background-color: $c200;
+                border-radius: 20px;
+                border: 0;
+                padding: 0px 7px 5px 7px;
+                font-weight: bold;
+            }
+            
+        }
+
+    }
+    footer{
+        background-color: $c400;
+        width: 100vw;
+        color: $c100;   
+        font-size: 1.8rem;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+input[type=text]{
+    background-color: transparent;
+    border: 0px;
+    font-size: 2.5rem;
+    transition: all 200ms;
+    color: $c600;
+    width: 20vw;
+    text-align: center;
+}
+input[type=text]:focus{
+    outline: none;
+}
+input[type=text]:hover{
+    text-decoration: underline;
+}
+.simble{
+    font-size: 4.3rem;
+    transition: all 200ms;
+    color: $c600;
+    text-align: center;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span{
+        font-size: 3.2rem;
+        transition: all 200ms;
+        color: $c700;
+        text-align: center;
+        
+    };
+    .table{
+        display: grid;
+        grid-template: repeat(3,1fr)/repeat(3,1fr);
+        width: $cub;
+        height: $cub;
+        margin-top: 20px;
+        .scuare{
+            background-color: $c100;
+            border: $c600 solid 5px;
+            transition:all 200ms;
+            font-weight: bold;
+            font-size: 4.3rem;
+            color: $c700;
+            
+        }
+        .scuare:hover{
+            background-color: $c300;
+            
+        }
+        .d1{
+            border-top: 0px;
+            border-left: 0px;
+            border-radius: 35px 0 0 0 ;
+        }
+        .d2{
+            border-top: 0px;
+        }
+        .d3{
+            border-top: 0px;
+            border-right: 0;
+            border-radius: 0 35px 0 0 ;
+        }
+        .d4{
+            border-left: 0;
+        }
+        .d6{
+            border-right: 0;
+        }
+        .d7{
+            border-left: 0;
+            border-bottom: 0;
+            border-radius: 0 0 0 35px ;
+        }
+        .d8{
+            border-bottom: 0;
+        }
+        .d9{
+            border-bottom: 0;
+            border-right: 0;
+            border-radius: 0 0 35px 0 ;
+        }
+    }
+}
+.nowiner{
+    font-size: 0.01rem;
+    position: absolute;
+    right: 50vw;
+    left: 50vw;
+    bottom:  50vh;
+    font-weight:700;
+    display: flex;
+    justify-content: center;
+    color: transparent;
+    transition: all 200ms ;
+}
+
+.winer{
+    font-size: 7vw;
+    position: absolute;
+    right: 20vw;
+    left: 20vw;
+    bottom:  50vh;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+    color: $c200;
+    animation: tada;
+    animation-duration: 2s;
+}
+
+.spanwiner {
+    background-color: $c600;
+    padding: 10px 27px;
+    border-radius: 30px;
+    border: 8px solid $c100;
+    
+}
+
+.borderwiner{
+    background-color: $c600;
+    padding: 35px 18px;
+    border-radius: 30px;
+}
+
+.moon {
+    position: fixed;
+    bottom: 4vh;
+    right: 5vh;
+    background-color: transparent;
+    width: min-content;
+    height: min-content;
+    border-radius: 15px;
+    background-color: $c400;
+    border: 2px solid $c400;
+    padding: 10px 10px 20px 10px;
+    transition: all 200ms;
+}
+img{
+    filter: invert(100%);
+    width: 80px;
+    height: 80px;
+}
+.moon:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
